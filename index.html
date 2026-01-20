@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CLOSET CREATIONS - 미니멀 패션 브랜드</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --background: #fafafa;
+      --foreground: #262626;
+      --muted-foreground: #737373;
+      --border: #e5e5e5;
+      --muted: #f5f5f5;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background-color: var(--background);
+      color: var(--foreground);
+    }
+    
+    .font-serif {
+      font-family: 'Playfair Display', serif;
+    }
+    
+    .bg-background {
+      background-color: var(--background);
+    }
+    
+    .text-foreground {
+      color: var(--foreground);
+    }
+    
+    .text-muted-foreground {
+      color: var(--muted-foreground);
+    }
+    
+    .border-border {
+      border-color: var(--border);
+    }
+    
+    .bg-muted {
+      background-color: var(--muted);
+    }
+    
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      white-space: nowrap;
+      border-radius: 0.125rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: all 0.2s;
+      cursor: pointer;
+      border: 1px solid transparent;
+    }
+    
+    .btn-default {
+      background-color: var(--foreground);
+      color: var(--background);
+      padding: 0.625rem 1rem;
+    }
+    
+    .btn-default:hover {
+      background-color: rgba(38, 38, 38, 0.9);
+    }
+    
+    .btn-outline {
+      background-color: transparent;
+      color: var(--foreground);
+      border-color: var(--border);
+      padding: 0.625rem 1rem;
+    }
+    
+    .btn-outline:hover {
+      background-color: var(--muted);
+    }
+    
+    .btn-lg {
+      padding: 0.75rem 2rem;
+      font-size: 1rem;
+    }
+    
+    .icon {
+      width: 1.25rem;
+      height: 1.25rem;
+      display: inline-block;
+    }
+    
+    .smooth-scroll {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body class="smooth-scroll">
+  <div class="min-h-screen bg-background">
+    <!-- Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
+      <nav class="container mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <div class="w-2 h-6 bg-foreground"></div>
+            <h1 class="text-xl font-serif tracking-tight">
+              CLOSET CREATIONS
+            </h1>
+          </div>
+          
+          <div class="hidden md:flex items-center gap-8">
+            <a href="#story" class="text-sm text-muted-foreground hover:text-foreground transition-colors">
+              스토리
+            </a>
+            <a href="#philosophy" class="text-sm text-muted-foreground hover:text-foreground transition-colors">
+              철학
+            </a>
+            <a href="#values" class="text-sm text-muted-foreground hover:text-foreground transition-colors">
+              가치
+            </a>
+            <a href="#contact" class="text-sm text-muted-foreground hover:text-foreground transition-colors">
+              문의
+            </a>
+          </div>
+
+          <div class="flex items-center gap-4">
+            <button class="text-foreground hover:text-muted-foreground transition-colors" aria-label="장바구니">
+              <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+              </svg>
+            </button>
+            <button class="md:hidden text-foreground" aria-label="메뉴">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+            </button>
+            <button class="btn btn-outline hidden md:inline-flex text-sm">
+              상담 예약
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-16 md:pt-32 md:pb-24">
+      <div class="container mx-auto px-6">
+        <div class="max-w-5xl mx-auto text-center">
+          <h2 class="text-5xl md:text-7xl lg:text-8xl font-serif tracking-tight mb-8">
+            완벽한 정리가 만나는 절제된 디자인
+          </h2>
+          <p class="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-12">
+            CLOSET CREATIONS의 맞춤형 디자인 솔루션으로 당신의 공간을 기능적인 예술 작품으로 변화시키세요.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <button class="btn btn-default btn-lg min-w-[200px]">
+              우리의 이야기
+              <svg class="icon ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+              </svg>
+            </button>
+            <button class="btn btn-outline btn-lg min-w-[200px]">
+              프리미엄 컬렉션
+              <svg class="icon ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Image -->
+    <section class="py-8">
+      <div class="container mx-auto px-6">
+        <div class="relative w-full aspect-[16/9] md:aspect-[21/9] overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=1920&q=80&auto=format&fit=crop" alt="패션 컬렉션" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-r from-black/40 to-black/20 flex items-center justify-center">
+            <div class="text-center text-white">
+              <div class="text-4xl md:text-6xl font-serif mb-4 drop-shadow-lg">패션 컬렉션</div>
+              <div class="text-lg drop-shadow-md">CLOSET CREATIONS</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Values Section -->
+    <section id="values" class="py-20 md:py-32">
+      <div class="container mx-auto px-6">
+        <div class="max-w-6xl mx-auto">
+          <p class="text-sm uppercase tracking-wider text-muted-foreground mb-12 text-center">
+            우리의 핵심 가치
+          </p>
+          
+          <div class="grid md:grid-cols-2 gap-12 md:gap-16 mb-20">
+            <div>
+              <div class="text-7xl md:text-8xl font-serif mb-6">1</div>
+              <h3 class="text-2xl md:text-3xl font-serif mb-4 tracking-tight">
+                고객과 함께하는 여정
+              </h3>
+              <p class="text-muted-foreground leading-relaxed">
+                우리는 기업의 전환을 지속 가능한 새로운 실천 방식으로 안내합니다.
+              </p>
+            </div>
+            
+            <div>
+              <div class="text-7xl md:text-8xl font-serif mb-6">2</div>
+              <h3 class="text-2xl md:text-3xl font-serif mb-4 tracking-tight">
+                혁신을 통한 가치 창출
+              </h3>
+              <p class="text-muted-foreground leading-relaxed">
+                우리는 새로운 프로젝트를 통해 혁신을 실현하고, 지속 가능한 시스템을 구축합니다.
+              </p>
+            </div>
+          </div>
+
+          <div class="relative w-full aspect-video overflow-hidden mb-12">
+            <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=1200&q=80&auto=format&fit=crop" alt="프리미엄 패브릭 소재" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-black/60 to-black/40 flex items-center justify-center">
+              <div class="text-center text-white">
+                <div class="text-3xl md:text-4xl font-serif mb-2 drop-shadow-lg">프리미엄 소재</div>
+                <div class="text-sm opacity-90 drop-shadow-md">Premium Fabric</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center max-w-3xl mx-auto">
+            <h3 class="text-3xl md:text-4xl lg:text-5xl font-serif mb-6 tracking-tight">
+              혁신, 지속가능성, 효율성의 결합
+            </h3>
+            <p class="text-muted-foreground leading-relaxed mb-8">
+              CLOSET CREATIONS는 패션 산업에서 혁신적인 전환의 선도자입니다. 우리는 기업에 지속 가능한 솔루션을 제공합니다.
+            </p>
+            <button class="btn btn-default min-w-[180px]">
+              더 알아보기
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section id="philosophy" class="py-20 md:py-32 bg-muted/30">
+      <div class="container mx-auto px-6">
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif mb-6 tracking-tight">
+              미래를 위한 글로벌 접근 방식
+            </h2>
+          </div>
+
+          <div class="grid md:grid-cols-3 gap-8">
+            <div class="relative aspect-[3/4] overflow-hidden group transition-transform duration-500 hover:scale-105">
+              <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800&q=80&auto=format&fit=crop" alt="파트너십" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+              <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                <h3 class="text-xl font-serif mb-2">파트너십</h3>
+                <p class="text-sm text-white/80">함께 성장하는 협력</p>
+              </div>
+            </div>
+
+            <div class="relative aspect-[3/4] overflow-hidden group transition-transform duration-500 hover:scale-105">
+              <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=800&q=80&auto=format&fit=crop" alt="혁신" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+              <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                <h3 class="text-xl font-serif mb-2">혁신</h3>
+                <p class="text-sm text-white/80">지속 가능한 미래 설계</p>
+              </div>
+            </div>
+
+            <div class="relative aspect-[3/4] overflow-hidden group transition-transform duration-500 hover:scale-105">
+              <img src="https://images.unsplash.com/photo-1539533018447-63fcce2678e3?w=800&q=80&auto=format&fit=crop" alt="품질" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+              <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                <h3 class="text-xl font-serif mb-2">품질</h3>
+                <p class="text-sm text-white/80">타협 없는 완벽함</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="py-20 md:py-32">
+      <div class="container mx-auto px-6">
+        <div class="max-w-3xl mx-auto text-center">
+          <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif mb-6 tracking-tight">
+            프로젝트에 대해 이야기해보세요
+          </h2>
+          <p class="text-lg text-muted-foreground mb-10 leading-relaxed">
+            당신의 비전을 현실로 만들어드립니다. 전문가와 상담하고 맞춤형 솔루션을 받아보세요.
+          </p>
+          <button class="btn btn-default btn-lg min-w-[200px]">
+            지금 문의하기
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-border bg-background py-12">
+      <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-4 gap-8 mb-8">
+          <div>
+            <div class="flex items-center gap-2 mb-4">
+              <div class="w-2 h-6 bg-foreground"></div>
+              <h3 class="text-base font-serif">CLOSET CREATIONS</h3>
+            </div>
+            <p class="text-sm text-muted-foreground">
+              미니멀 디자인의 혁신
+            </p>
+          </div>
+
+          <div>
+            <h4 class="text-sm font-medium mb-4">회사</h4>
+            <ul class="space-y-2 text-sm text-muted-foreground">
+              <li>
+                <a href="#" class="hover:text-foreground transition-colors">
+                  소개
+                </a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-foreground transition-colors">
+                  채용
+                </a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-foreground transition-colors">
+                  지속가능성
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-sm font-medium mb-4">고객지원</h4>
+            <ul class="space-y-2 text-sm text-muted-foreground">
+              <li>
+                <a href="#" class="hover:text-foreground transition-colors">
+                  FAQ
+                </a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-foreground transition-colors">
+                  배송정보
+                </a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-foreground transition-colors">
+                  반품정책
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-sm font-medium mb-4">연락처</h4>
+            <ul class="space-y-2 text-sm text-muted-foreground">
+              <li>contact@closetcreations.kr</li>
+              <li>02-1234-5678</li>
+              <li>서울시 강남구</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="pt-8 border-t border-border text-center text-sm text-muted-foreground">
+          <p>© 2024 CLOSET CREATIONS. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
